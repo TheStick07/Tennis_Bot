@@ -1,0 +1,4 @@
+source;share/Tennis_Bot/local_setup.bash
+source;share/Tennis_Bot/local_setup.dsv
+source;share/Tennis_Bot/local_setup.sh
+source;share/Tennis_Bot/local_setup.zsh

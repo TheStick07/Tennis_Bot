@@ -1,0 +1,19 @@
+Alle Commandos müssen in  ~/dev_ws ausgeführt werden
+Falls nicht automatisch muss noch der Workspace initalisiert werden:
+source  install/setup.bash
+
+1. Simulation starten:
+ros2 launch Tennis_BOT rps_sim.launch.py world:=./src/Tennis_Bot/words/Tennis.world
+
+2. Joystick Eingabe starten:
+ros2 launch Tennis_Bot joystick.launch.py
+
+Joystick gibt die Eingaben auf topic /cmd_vel aus
+remapping auf /cmd_vel_unstamped, da sont keine bewegung
+Ausgabe des Topics mit (ros2 topic echo /cmd_vel)
+
+3. Kartengenerierung starten:
+ros2 launch slam_toolbox online_async_launch.py params_file:=./src/Tennis_Bot/config/mapper_params_online_async.yaml use_sime_time:=true
+
+4. Visualisierung in Rviz2 starten:
+rviz2
