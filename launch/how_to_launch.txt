@@ -17,3 +17,7 @@ ros2 launch slam_toolbox online_async_launch.py params_file:=./src/Tennis_Bot/co
 
 4. Visualisierung in Rviz2 starten:
 rviz2
+
+Nav2:
+ros2 run twist_mux twist_mux --ros-args --params-file ./src/Tennis_Bot/config/twist_mux.yaml -r cmd_vel_out:=diff_cont/cmd_vel_unstamped
+ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true
