@@ -1,6 +1,8 @@
 Vorbereitung:
 ROS2 Iron https://docs.ros.org/en/iron/Installation/Ubuntu-Install-Debians.html
 Gazebo: sudo apt-get install ros-iron-gazebo-ros-pkgs
+Controler Manager: sudo apt install ros-iron-ros2-control ros-iron-ros2-controllers ros-iron-gazebo-ros2-control
+USB Passthrough: https://learn.microsoft.com/de-de/windows/wsl/connect-usb (usbipd wsl attach --busid 3-3)
 
 Alle Commandos müssen in  ~/dev_ws ausgeführt werden
 git clone https://github.com/TheStick07/Tennis_Bot.git
