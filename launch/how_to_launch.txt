@@ -3,7 +3,7 @@ Falls nicht automatisch muss noch der Workspace initalisiert werden:
 source  install/setup.bash
 
 1. Simulation starten:
-ros2 launch Tennis_BOT rps_sim.launch.py world:=./src/Tennis_Bot/words/Tennis.world
+ros2 launch Tennis_BOT rsp_sim.launch.py world:=./src/Tennis_Bot/worlds/Tennis.world
 
 2. Joystick Eingabe starten:
 ros2 launch Tennis_Bot joystick.launch.py
