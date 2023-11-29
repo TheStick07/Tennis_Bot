@@ -393,7 +393,7 @@
       </link>
       <static>0</static>
       <plugin name='gazebo_ros2_control' filename='libgazebo_ros2_control.so'>
-        <parameters>/home/dev-machine/dev_ws/install/Tennis_Bot/share/Tennis_Bot/config/my_controllers.yaml</parameters>
+        <parameters>/home/lars/dev-ws/install/Tennis_Bot/share/Tennis_Bot/config/my_controllers.yaml</parameters>
       </plugin>
       <pose>0 0 0 0 -0 0</pose>
     </model>
