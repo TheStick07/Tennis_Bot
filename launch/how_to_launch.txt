@@ -2,7 +2,10 @@ Vorbereitung:
 ROS2 Iron https://docs.ros.org/en/iron/Installation/Ubuntu-Install-Debians.html
 Gazebo: sudo apt-get install ros-iron-gazebo-ros-pkgs
 Controler Manager: sudo apt install ros-iron-ros2-control ros-iron-ros2-controllers ros-iron-gazebo-ros2-control
-USB Passthrough: https://learn.microsoft.com/de-de/windows/wsl/connect-usb (usbipd wsl attach --busid 3-3)
+(USB Passthrough: https://learn.microsoft.com/de-de/windows/wsl/connect-usb (usbipd wsl attach --busid 3-3))
+SLAM-Toolbox: sudo apt install ros-iron-slam-toolbox
+Twist-Mux: sudo apt install ros-iron-twist-mux
+NAV2: sudo apt install ros-iron-navigation2 ros-iron-nav2-bringup
 
 Alle Commandos müssen in  ~/dev-ws ausgeführt werden
 git clone https://github.com/TheStick07/Tennis_Bot.git
@@ -20,8 +23,8 @@ ros2 launch Tennis_Bot rsp_sim.launch.py world:=./src/Tennis_Bot/worlds/Tennis.w
 ros2 launch Tennis_Bot joystick.launch.py
 
 Joystick gibt die Eingaben auf topic /cmd_vel aus
-remapping auf /cmd_vel_unstamped, da sont keine bewegung
-Ausgabe des Topics mit (ros2 topic echo /cmd_vel)
+remapping auf /cmd_vel_joy, da sont keine bewegung
+Ausgabe des Topics mit (ros2 topic echo /cmd_vel_joy)
 
 3. Kartengenerierung starten:
 ros2 launch slam_toolbox online_async_launch.py params_file:=./src/Tennis_Bot/config/mapper_params_online_async.yaml use_sime_time:=true
