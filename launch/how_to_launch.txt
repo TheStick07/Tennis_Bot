@@ -7,6 +7,13 @@ SLAM-Toolbox: sudo apt install ros-iron-slam-toolbox
 Twist-Mux: sudo apt install ros-iron-twist-mux
 NAV2: sudo apt install ros-iron-navigation2 ros-iron-nav2-bringup
 
+Motor-Treiber: 
+    cd /src
+    git clone https://github.com/joshnewans/serial
+    git clone -b dev-humble https://github.com/fridfinnurm/diffdrive_arduino.git
+    cd ..
+    colcon build --symlink-install
+
 Alle Commandos müssen in  ~/dev-ws ausgeführt werden
 git clone https://github.com/TheStick07/Tennis_Bot.git
 
