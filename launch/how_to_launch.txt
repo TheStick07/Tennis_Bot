@@ -6,6 +6,7 @@ Controler Manager: sudo apt install ros-iron-ros2-control ros-iron-ros2-controll
 SLAM-Toolbox: sudo apt install ros-iron-slam-toolbox
 Twist-Mux: sudo apt install ros-iron-twist-mux
 NAV2: sudo apt install ros-iron-navigation2 ros-iron-nav2-bringup
+(PI): sudo apt install ros-iron-xacro 
 
 Motor-Treiber: 
     cd /src
@@ -42,3 +43,13 @@ rviz2
 Nav2:
 ros2 run twist_mux twist_mux --ros-args --params-file ./src/Tennis_Bot/config/twist_mux.yaml -r cmd_vel_out:=diff_cont/cmd_vel_unstamped
 ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true
+
+
+# REAL ROBOT
+
+1. Controller starten:
+ros2 launch Tennis_Bot launch_robot.launch.py 
+
+2. Joystick Eingabe starten:
+ros2 launch Tennis_Bot joystick.launch.py
+
