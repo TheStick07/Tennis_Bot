@@ -53,3 +53,7 @@ ros2 launch Tennis_Bot launch_robot.launch.py
 2. Joystick Eingabe starten:
 ros2 launch Tennis_Bot joystick.launch.py
 
+3. Vnc starten
+putty verbindung aufbauen
+vncserver (startet den VNCserver auf Port 1)
+Auf anderer Maschine VNCviewer öffnen (IP-Adresse:1)
