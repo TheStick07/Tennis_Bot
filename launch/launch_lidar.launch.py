@@ -15,7 +15,7 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='rplidar_ros',
-            executable='rplidar_node',
+            executable='rplidar_composition',
             name='rplidar_node',
             parameters=[{'channel_type':channel_type,
                          'serial_port': serial_port,
