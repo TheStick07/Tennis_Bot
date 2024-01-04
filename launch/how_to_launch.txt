@@ -47,13 +47,16 @@ ros2 launch nav2_bringup navigation_launch.py use_sim_time:=true
 
 # REAL ROBOT
 
-1. Controller starten:
+1. Roboter starten (Motorcontroller + Lidar):
 ros2 launch Tennis_Bot launch_robot.launch.py 
 
 2. Joystick Eingabe starten:
 ros2 launch Tennis_Bot joystick.launch.py
 
-3. Vnc starten
-putty verbindung aufbauen
-vncserver (startet den VNCserver auf Port 1)
-Auf anderer Maschine VNCviewer öffnen (IP-Adresse:1)
+3. X Windows starten
+Putty korrekt konifgurieren (SSH -> X11 -> Enable X11 forwarding & X display location = :0)
+VcXsrv auf Windows Maschine installieren (https://sourceforge.net/projects/vcxsrv/)
+X Server starten (option ein großes Fenster läuft am stabilsten)
+
+4.Visualisierung mit Rviz2 starten:
+rviz2
